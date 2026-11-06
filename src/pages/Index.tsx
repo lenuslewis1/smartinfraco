@@ -52,6 +52,8 @@ import whyDefault from "@/assets/why-default.webp";
 import appMockup from "@/assets/app-mockup.webp";
 import appStoreBadge from "@/assets/app-store-badge.png";
 import googlePlayBadge from "@/assets/google-play-badge.png";
+import nitaPartnership from "@/assets/nita-partnership.png";
+import smartPartnership from "@/assets/smart-partnership.png";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 const heroSlides = [
@@ -222,6 +224,28 @@ function Hero() {
     </section>
   );
 }
+function Partnership() {
+  return (
+    <section aria-labelledby="partnership-heading" className="bg-white px-5 py-16 sm:px-8 lg:py-20">
+      <div className="mx-auto max-w-[1020px] text-center">
+        <h2 id="partnership-heading" className="text-2xl font-bold text-black sm:text-[28px]">
+          Strategic Partnership with NITA
+        </h2>
+        <div className="mx-auto my-10 flex max-w-[850px] flex-col items-center justify-center gap-6 sm:my-12 sm:flex-row sm:gap-10 lg:gap-16">
+          <a href="https://nita.gov.gh/" target="_blank" rel="noopener noreferrer" className="w-full max-w-[320px] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0783c5]">
+            <img src={nitaPartnership} alt="Republic of Ghana and National Information Technology Agency Ghana" className="w-full object-contain" />
+          </a>
+          <span aria-hidden="true" className="text-5xl font-bold leading-none text-black">&amp;</span>
+          <img src={smartPartnership} alt="Smart Infraco" className="w-full max-w-[340px] object-contain" />
+        </div>
+        <p className="bg-[#0783c5] px-5 py-5 text-base leading-relaxed text-white sm:px-8 sm:text-lg">
+          Through our partnership with the <a href="https://nita.gov.gh/" target="_blank" rel="noopener noreferrer" className="font-bold text-[#80ed21] underline-offset-4 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">National Information Technology Agency (NITA)</a>, an agency under the Ministry of Communication, Digital Technology and Innovations, <span className="font-bold text-[#80ed21]">Smart Infraco</span> manages, operates and commercialises Ghana’s critical national digital infrastructure, supporting the growth of a reliable, secure and connected digital ecosystem.
+        </p>
+      </div>
+    </section>
+  );
+}
+
 function AboutBento() {
   return (
     <section className="bg-[#f4f7fa] py-16 lg:py-20">
@@ -918,6 +942,7 @@ export default function HomePage() {
   return (
     <Layout>
       <Hero />
+      <Partnership />
       <AboutBento />
       <ServicesThree />
       <ExpertiseGrid />
